@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Layout from "../../Components/Layout";
 import Card from "../../Components/Cards";
+import ProductDetail from "../../Components/ProductDetail";
 import { useFetcher } from "react-router-dom";
 function Home() {
   const [items, setItems] = useState(null);
@@ -19,6 +20,7 @@ function Home() {
           <Card key={item.id} data={item} />
         ))}
       </div>
+      <ProductDetail />
     </Layout>
   );
 }
