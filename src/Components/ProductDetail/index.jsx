@@ -1,9 +1,8 @@
-import { XMarkIcon } from "@heroicons/react/24/solid";
-import "./styles.css";
 import { useContext } from "react";
+import { XMarkIcon } from "@heroicons/react/24/solid";
 import { ShoppingCartContext } from "../../Context";
+import "./styles.css";
 
-//Detalle de producto
 const ProductDetail = () => {
   const context = useContext(ShoppingCartContext);
 
@@ -17,7 +16,7 @@ const ProductDetail = () => {
         <h2 className="font-medium text-xl">Detail</h2>
         <div>
           <XMarkIcon
-            className="h-6 w-6 text-blue-500 cursor-pointer"
+            className="h-6 w-6 text-black cursor-pointer"
             onClick={() => context.closeProductDetail()}
           ></XMarkIcon>
         </div>
@@ -34,10 +33,10 @@ const ProductDetail = () => {
           ${context.productToShow.price}
         </span>
         <span className="font-medium text-md">
-          {context.productToShow.title}
+          ${context.productToShow.title}
         </span>
         <span className="font-light text-sm">
-          {context.productToShow.description}
+          ${context.productToShow.description}
         </span>
       </p>
     </aside>
